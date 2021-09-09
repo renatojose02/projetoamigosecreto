@@ -4,7 +4,7 @@ const ParticipanteRepository = require('../Repositories/participanteRepository')
 module.exports = {
     async create (request, response){
         try {
-            let { _id } = await ParicipanteRepository.create(request.body);
+            let { _id } = await ParticipanteRepository.create(request.body);
             return response.json({
                 "mensagem" : "Participante criado com sucesso!",
                 "status" : 200,
@@ -24,7 +24,7 @@ module.exports = {
         try {
             let Participante = await ParticipanteRepository.edit(request.body);
             return response.json({
-                "mensagem" : "Participante criado com sucesso!",
+                "mensagem" : "Participante atualizado com sucesso!",
                 "status" : 200,
                 "participante" :Participante
             });
@@ -40,6 +40,7 @@ module.exports = {
 
     async delete (request, response){
         let { id } = request.params;
+        const participante = await ParticipanteRepository.delete(id);
         return response.json({
             "mensagem" : "Participante removido com sucesso!",
             "status" : 200

@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "add": "^2.0.6",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.5",
+    "nodaemon": "^0.0.5",
+    "nodemon": "^2.0.12",
+    "yarn": "^1.22.11"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
+  },
+  "scripts": {
+    "dev": "yarn nodemon ./src/index.js",
+    "start": "node index.js"
+  }
+}
